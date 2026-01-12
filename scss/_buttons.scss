@@ -1,0 +1,60 @@
+// ============================================
+// ESTILOS DE BOTONES
+// Botones reutilizables con variantes
+// ============================================
+
+// Botón base (estilos comunes a todos los botones)
+.button {
+  display: inline-flex;              // Permite alinear icono + texto
+  align-items: center;               // Centra verticalmente el contenido
+  justify-content: center;           // Centra horizontalmente el contenido
+  gap: $spacing-xs;                  // Espacio entre icono y texto
+  
+  padding: $spacing-sm $spacing-lg;  // Espaciado interno
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  border-radius: $border-radius-md;
+  
+  transition: all $transition-normal; // Transición suave al hacer hover
+  cursor: pointer;
+  border: none;
+  
+  // Evita que el texto se seleccione al hacer clic
+  user-select: none;
+  
+  // Estado deshabilitado
+  &:disabled {
+    opacity: 0.5;                    // Semi-transparente
+    cursor: not-allowed;             // Cursor de "no permitido"
+    pointer-events: none;            // No responde a clics
+  }
+  
+  // Botón primario (naranja)
+  &--primary {
+    background-color: $color-primary;
+    color: white;
+    box-shadow: $shadow-sm;
+    
+    &:hover:not(:disabled) {
+      background-color: $color-primary-dark;
+      box-shadow: $shadow-md;
+      transform: translateY(-2px);   // Sube ligeramente
+    }
+    
+    &:active:not(:disabled) {
+      transform: translateY(0);      // Vuelve a su posición
+    }
+  }
+  
+  // Botón secundario (blanco con borde)
+  &--secondary {
+    background-color: white;
+    color: $color-text-primary;
+    border: 2px solid $color-text-light;
+    
+    &:hover:not(:disabled) {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+}

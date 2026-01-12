@@ -1,0 +1,45 @@
+// ============================================
+// RESET CSS
+// Normaliza los estilos por defecto del navegador
+// ============================================
+
+// Elimina márgenes y padding por defecto de todos los elementos
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Incluye padding y border en el ancho total
+}
+
+// Elimina estilos de lista
+ul,
+ol {
+  list-style: none; // Sin viñetas ni números
+}
+
+// Elimina subrayado de enlaces
+a {
+  text-decoration: none;
+  color: inherit; // Hereda el color del padre
+}
+
+// Normaliza botones
+button {
+  border: none;           // Sin borde por defecto
+  background: none;       // Sin fondo por defecto
+  cursor: pointer;        // Cursor de mano al pasar sobre él
+  font-family: inherit;   // Hereda la fuente del documento
+}
+
+// Normaliza inputs
+input,
+textarea {
+  font-family: inherit;   // Hereda la fuente
+  font-size: inherit;     // Hereda el tamaño de texto
+}
+
+// Hace que las imágenes sean responsive por defecto
+img {
+  max-width: 100%;        // No se sale de su contenedor
+  height: auto;           // Mantiene la proporción
+  display: block;         // Elimina espacio blanco debajo
+}

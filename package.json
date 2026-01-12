@@ -1,0 +1,24 @@
+{
+  "name": "prueba-frontend-cervezas",
+  "version": "1.0.0",
+  "description": "Prueba técnica frontend - Sistema de filtros de productos",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NievesGC/prueba-frontend-cervezas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NievesGC/prueba-frontend-cervezas/issues"
+  },
+  "homepage": "https://github.com/NievesGC/prueba-frontend-cervezas#readme",
+  "devDependencies": {
+    "sass": "^1.97.2"
+  }
+}

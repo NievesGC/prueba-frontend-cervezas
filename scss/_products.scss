@@ -1,0 +1,102 @@
+// ============================================
+// GRID DE PRODUCTOS
+// Sistema de cuadrícula responsive
+// ============================================
+
+.products-grid {
+  display: grid;                             // Sistema de cuadrícula
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); // Columnas automáticas
+  gap: $spacing-lg;                          // Espacio entre tarjetas
+  margin-bottom: $spacing-xl;
+}
+
+// Tarjeta de producto individual
+.product-card {
+  background-color: $color-card-bg;
+  border-radius: $border-radius-lg;
+  overflow: hidden;                          // Oculta contenido que se sale
+  box-shadow: $shadow-sm;
+  transition: all $transition-normal;
+  
+  // Hover effect
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-4px);             // Sube ligeramente
+  }
+  
+  // Contenedor de la imagen
+  &__image-container {
+    width: 100%;
+    height: 200px;                           // Altura fija para todas las imágenes
+    background-color: $color-background;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  // Imagen del producto
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                       // Recorta la imagen para llenar el espacio
+  }
+  
+  // Contenido de la tarjeta (texto)
+  &__content {
+    padding: $spacing-md;
+  }
+  
+  // Título del producto
+  &__title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin-bottom: $spacing-xs;
+  }
+  
+  // Descripción del producto
+  &__description {
+    font-size: $font-size-small;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-md;
+    line-height: 1.4;
+  }
+  
+  // Detalles (alcohol y precio)
+  &__details {
+    display: flex;
+    justify-content: space-between;          // Separa alcohol y precio
+    align-items: center;
+    padding-top: $spacing-sm;
+    border-top: 1px solid $color-background; // Línea divisoria
+  }
+  
+  // Graduación alcohólica
+  &__alcohol {
+    font-size: $font-size-small;
+    color: $color-text-secondary;
+    font-weight: $font-weight-medium;
+  }
+  
+  // Precio
+  &__price {
+    font-size: $font-size-large;
+    color: $color-primary;
+    font-weight: $font-weight-bold;
+  }
+}
+
+// Responsive: Tablet
+@media (min-width: $breakpoint-tablet) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);   // 2 columnas
+  }
+}
+
+// Responsive: Desktop
+@media (min-width: $breakpoint-desktop) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);   // 4 columnas
+  }
+}

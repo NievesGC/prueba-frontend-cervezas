@@ -1,0 +1,74 @@
+// ============================================
+// VARIABLES GLOBALES
+// Define colores, tamaños y espaciados
+// ============================================
+
+// --- COLORES ---
+// Colores primarios de la marca
+$color-primary: #f39c12;        // Naranja dorado (color cerveza)
+$color-primary-dark: #d68910;   // Naranja oscuro para hover
+$color-primary-light: #f5b041;  // Naranja claro
+
+// Colores de fondo
+$color-background: #f8f9fa;     // Gris muy claro para el fondo
+$color-card-bg: #ffffff;        // Blanco para las tarjetas
+
+// Colores de texto
+$color-text-primary: #2c3e50;   // Gris oscuro para títulos
+$color-text-secondary: #7f8c8d; // Gris medio para descripciones
+$color-text-light: #95a5a6;     // Gris claro para detalles
+
+// Colores de estado
+$color-success: #27ae60;        // Verde para confirmaciones
+$color-error: #e74c3c;          // Rojo para errores
+$color-warning: #f39c12;        // Naranja para advertencias
+
+// Overlay del modal
+$color-overlay: rgba(0, 0, 0, 0.5); // Negro semi-transparente
+
+// --- TIPOGRAFÍA ---
+$font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-size-base: 16px;          // Tamaño base de texto
+$font-size-small: 14px;         // Texto pequeño
+$font-size-large: 18px;         // Texto grande
+$font-size-title: 24px;         // Títulos
+
+$font-weight-normal: 400;       // Peso normal
+$font-weight-medium: 500;       // Peso medio
+$font-weight-bold: 700;         // Negrita
+
+// --- ESPACIADOS ---
+$spacing-xs: 8px;               // Espaciado extra pequeño
+$spacing-sm: 12px;              // Espaciado pequeño
+$spacing-md: 16px;              // Espaciado medio
+$spacing-lg: 24px;              // Espaciado grande
+$spacing-xl: 32px;              // Espaciado extra grande
+
+// --- BORDER RADIUS ---
+$border-radius-sm: 4px;         // Radio pequeño
+$border-radius-md: 8px;         // Radio medio
+$border-radius-lg: 12px;        // Radio grande
+$border-radius-full: 50%;       // Círculo perfecto
+
+// --- SOMBRAS ---
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);           // Sombra suave
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);           // Sombra media
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);         // Sombra grande
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);        // Sombra extra grande
+
+// --- TRANSICIONES ---
+$transition-fast: 0.2s ease;    // Transición rápida
+$transition-normal: 0.3s ease;  // Transición normal
+$transition-slow: 0.5s ease;    // Transición lenta
+
+// --- BREAKPOINTS (para responsive) ---
+$breakpoint-mobile: 480px;      // Móviles pequeños
+$breakpoint-tablet: 768px;      // Tablets
+$breakpoint-desktop: 1024px;    // Escritorio
+$breakpoint-large: 1280px;      // Pantallas grandes
+
+// --- Z-INDEX (capas de elementos) ---
+$z-index-base: 1;               // Capa base
+$z-index-header: 10;            // Cabecera
+$z-index-modal-overlay: 100;    // Overlay del modal
+$z-index-modal-content: 101;    // Contenido del modal

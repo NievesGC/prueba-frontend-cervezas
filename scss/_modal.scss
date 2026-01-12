@@ -1,0 +1,287 @@
+// ============================================
+// MODAL DE FILTROS
+// Ventana emergente con overlay
+// ============================================
+
+.modal {
+  // Por defecto el modal está oculto
+  display: none;
+  
+  // Posición fija para cubrir toda la pantalla
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $z-index-modal-overlay;
+  
+  // Cuando está activo, se muestra
+  &.active {
+    display: flex;
+    align-items: center;              // Centra verticalmente
+    justify-content: center;          // Centra horizontalmente
+  }
+  
+  // Overlay oscuro de fondo
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-overlay; // Negro semi-transparente
+    z-index: $z-index-modal-overlay;
+    
+    // Animación de entrada
+    animation: fadeIn $transition-normal;
+  }
+  
+  // Contenedor del contenido del modal
+  &__content {
+    position: relative;
+    z-index: $z-index-modal-content;  // Por encima del overlay
+    
+    width: 90%;                       // Ancho en móvil
+    max-width: 500px;                 // Ancho máximo en desktop
+    max-height: 90vh;                 // Altura máxima (90% de la ventana)
+    
+    background-color: white;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-xl;
+    
+    overflow: hidden;                 // Oculta contenido que se sale
+    
+    // Animación de entrada (sube desde abajo)
+    animation: slideUp $transition-normal;
+  }
+  
+  // Cabecera del modal
+  &__header {
+    display: flex;
+    justify-content: space-between;   // Separa título y botón cerrar
+    align-items: center;
+    
+    padding: $spacing-lg;
+    border-bottom: 1px solid $color-background;
+  }
+  
+  // Título del modal
+  &__title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0;
+  }
+  
+  // Botón de cerrar (X)
+  &__close {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: transparent;
+    border: none;
+    border-radius: $border-radius-sm;
+    color: $color-text-secondary;
+    
+    cursor: pointer;
+    transition: all $transition-fast;
+    
+    &:hover {
+      background-color: $color-background;
+      color: $color-text-primary;
+    }
+    
+    // Icono SVG dentro del botón
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  // Footer del modal (botones de acción)
+  &__footer {
+    display: flex;
+    gap: $spacing-sm;
+    padding: $spacing-lg;
+    border-top: 1px solid $color-background;
+    background-color: $color-background;
+    
+    // Botones ocupan el mismo ancho
+    .button {
+      flex: 1;
+    }
+  }
+}
+
+// ============================================
+// FORMULARIO DE FILTROS
+// ============================================
+
+.filter-form {
+  padding: $spacing-lg;
+  max-height: 60vh;                   // Altura máxima con scroll
+  overflow-y: auto;                   // Scroll vertical si es necesario
+}
+
+// Grupo de filtros (ej: "Tipo de cerveza")
+.filter-group {
+  margin-bottom: $spacing-lg;
+  
+  // Título del grupo
+  &__title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin-bottom: $spacing-md;
+  }
+}
+
+// ============================================
+// OPCIÓN DE FILTRO (Checkbox personalizado)
+// ============================================
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  
+  padding: $spacing-sm;
+  margin-bottom: $spacing-xs;
+  
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+  
+  // Hover effect
+  &:hover {
+    background-color: $color-background;
+  }
+  
+  // Input checkbox (oculto, usaremos un diseño personalizado)
+  &__input {
+    position: absolute;
+    opacity: 0;                       // Invisible
+    pointer-events: none;             // No interactúa
+    
+    // Cuando está marcado
+    &:checked + .filter-option__label {
+      &::before {
+        background-color: $color-primary;
+        border-color: $color-primary;
+      }
+      
+      // Checkmark (✓)
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+  
+  // Label (texto visible)
+  &__label {
+    position: relative;
+    padding-left: 32px;               // Espacio para el checkbox personalizado
+    
+    font-size: $font-size-base;
+    color: $color-text-primary;
+    cursor: pointer;
+    
+    user-select: none;                // No se puede seleccionar el texto
+    
+    // Checkbox personalizado (cuadrado)
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      
+      width: 20px;
+      height: 20px;
+      
+      border: 2px solid $color-text-light;
+      border-radius: $border-radius-sm;
+      background-color: white;
+      
+      transition: all $transition-fast;
+    }
+    
+    // Checkmark (✓) cuando está marcado
+    &::after {
+      content: '✓';
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%) scale(0);
+      
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      
+      opacity: 0;
+      transition: all $transition-fast;
+    }
+  }
+}
+
+// ============================================
+// ANIMACIONES
+// ============================================
+
+// Animación de fade in para el overlay
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Animación de slide up para el contenido del modal
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);      // Empieza 50px abajo
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);         // Termina en su posición
+  }
+}
+
+// ============================================
+// RESPONSIVE
+// ============================================
+
+// Desktop: modal más ancho
+@media (min-width: $breakpoint-tablet) {
+  .modal {
+    &__content {
+      width: 500px;                   // Ancho fijo en desktop
+    }
+  }
+}
+
+// Móvil: modal ocupa más espacio
+@media (max-width: $breakpoint-mobile) {
+  .modal {
+    &__content {
+      width: 95%;
+      max-height: 95vh;
+    }
+    
+    &__header,
+    &__footer {
+      padding: $spacing-md;
+    }
+  }
+  
+  .filter-form {
+    padding: $spacing-md;
+  }
+}

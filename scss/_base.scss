@@ -1,0 +1,47 @@
+// ============================================
+// ESTILOS BASE
+// Configuración general de la página
+// ============================================
+
+// Estilos del body (toda la página)
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  line-height: 1.6;                    // Altura de línea para mejor legibilidad
+  color: $color-text-primary;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased; // Mejora el renderizado de fuentes en Mac
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Contenedor principal de la aplicación
+.app-container {
+  max-width: 1200px;                   // Ancho máximo en pantallas grandes
+  margin: 0 auto;                      // Centrado horizontal
+  padding: $spacing-md;                // Espaciado interno
+  min-height: 100vh;                   // Altura mínima de toda la ventana
+}
+
+// Títulos generales
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  margin-bottom: $spacing-sm;
+}
+
+h1 {
+  font-size: $font-size-title;
+}
+
+h2 {
+  font-size: $font-size-large;
+}
+
+h3 {
+  font-size: $font-size-base;
+}
+
+// Párrafos
+p {
+  margin-bottom: $spacing-sm;
+}

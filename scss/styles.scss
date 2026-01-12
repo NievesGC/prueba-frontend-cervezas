@@ -1,0 +1,20 @@
+// ============================================
+// ARCHIVO PRINCIPAL DE ESTILOS
+// Importa todos los módulos parciales
+// ============================================
+
+// 1. Variables globales (colores, tamaños, etc)
+@import 'variables';
+
+// 2. Reset CSS (normaliza estilos del navegador)
+@import 'reset';
+
+// 3. Estilos base (tipografía, contenedores)
+@import 'base';
+
+// 4. Componentes específicos
+@import 'header';
+@import 'filter-bar';
+@import 'products';
+@import 'modal';
+@import 'buttons';

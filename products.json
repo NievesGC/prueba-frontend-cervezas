@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Golden Ale",
+    "category": 1,
+    "image": "camba.png",
+    "price": "4.50€",
+    "alcohol": "5.2%",
+    "description": "Cerveza rubia suave con notas cítricas"
+  },
+  {
+    "id": 2,
+    "name": "Amber Lager",
+    "category": 2,
+    "image": "amber-lager.jpg",
+    "price": "4.80€",
+    "alcohol": "5.5%",
+    "description": "Cerveza morena con cuerpo medio"
+  },
+  {
+    "id": 3,
+    "name": "Red IPA",
+    "category": 3,
+    "image": "red-ipa.jpg",
+    "price": "5.20€",
+    "alcohol": "6.5%",
+    "description": "Cerveza roja intensa con amargor pronunciado"
+  },
+  {
+    "id": 4,
+    "name": "Pale Ale",
+    "category": 1,
+    "image": "pale-ale.jpg",
+    "price": "4.70€",
+    "alcohol": "5.8%",
+    "description": "Cerveza rubia con toques florales"
+  },
+  {
+    "id": 5,
+    "name": "Brown Porter",
+    "category": 2,
+    "image": "brown-porter.jpg",
+    "price": "5.00€",
+    "alcohol": "6.0%",
+    "description": "Cerveza morena con notas a café"
+  },
+  {
+    "id": 6,
+    "name": "Irish Red",
+    "category": 3,
+    "image": "irish-red.jpg",
+    "price": "4.90€",
+    "alcohol": "5.5%",
+    "description": "Cerveza roja equilibrada y maltosa"
+  },
+  {
+    "id": 7,
+    "name": "Pilsner",
+    "category": 1,
+    "image": "pilsner.jpg",
+    "price": "4.30€",
+    "alcohol": "4.8%",
+    "description": "Cerveza rubia ligera y refrescante"
+  },
+  {
+    "id": 8,
+    "name": "Stout",
+    "category": 2,
+    "image": "stout.jpg",
+    "price": "5.50€",
+    "alcohol": "7.0%",
+    "description": "Cerveza morena cremosa e intensa"
+  }
+]

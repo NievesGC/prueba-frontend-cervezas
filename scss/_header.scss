@@ -1,0 +1,44 @@
+// ============================================
+// ESTILOS DEL HEADER
+// Cabecera con título y subtítulo
+// ============================================
+
+.header {
+  text-align: center;                    // Centrar el contenido
+  padding: $spacing-xl 0;                // Espaciado arriba y abajo
+  margin-bottom: $spacing-lg;            // Separación del contenido siguiente
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%); // Degradado
+  color: white;                          // Texto blanco
+  border-radius: $border-radius-lg;      // Bordes redondeados
+  box-shadow: $shadow-md;                // Sombra suave
+
+  // Título principal
+  &__title {
+    font-size: $font-size-title * 1.5;   // 36px (24px * 1.5)
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-xs;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Sombra en el texto
+  }
+
+  // Subtítulo
+  &__subtitle {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    opacity: 0.9;                        // Ligeramente transparente
+  }
+}
+
+// Responsive: En móviles pequeños
+@media (max-width: $breakpoint-mobile) {
+  .header {
+    padding: $spacing-lg 0;              // Menos padding en móvil
+    
+    &__title {
+      font-size: $font-size-title;       // Título más pequeño
+    }
+    
+    &__subtitle {
+      font-size: $font-size-small;       // Subtítulo más pequeño
+    }
+  }
+}

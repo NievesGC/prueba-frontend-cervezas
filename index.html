@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Catálogo de Cervezas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Contenedor principal de la aplicación -->
+    <div class="app-container">
+        
+        <!-- SECCIÓN: Cabecera -->
+        <header class="header">
+            <h1 class="header__title">Catálogo de Cervezas</h1>
+            <p class="header__subtitle">Descubre nuestra selección artesanal</p>
+        </header>
+
+        <!-- SECCIÓN: Barra de filtros -->
+        <section class="filter-bar">
+            <!-- Botón que abre el modal de filtros -->
+            <button class="filter-button" id="filterButton">
+                <svg class="filter-button__icon" width="20" height="20">
+                    <use href="svg/filter.svg#filter-icon"></use>
+                </svg>
+                <span class="filter-button__text">Filtrar</span>
+                <!-- Badge que muestra el número de filtros activos -->
+                <span class="filter-button__badge" id="filterBadge" style="display: none;">0</span>
+            </button>
+        </section>
+
+        <!-- SECCIÓN: Grid de productos -->
+        <main class="products-grid" id="productsGrid">
+            <!-- Aquí se cargarán los productos dinámicamente con Handlebars -->
+        </main>
+
+        <!-- MODAL: Filtros -->
+        <div class="modal" id="filterModal">
+            <!-- Overlay oscuro que cubre la pantalla -->
+            <div class="modal__overlay" id="modalOverlay"></div>
+            
+            <!-- Contenido del modal -->
+            <div class="modal__content">
+                <!-- Cabecera del modal -->
+                <div class="modal__header">
+                    <h2 class="modal__title">Filtros</h2>
+                    <button class="modal__close" id="closeModal" aria-label="Cerrar">
+                        <svg width="24" height="24">
+                            <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2"/>
+                            <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Formulario de filtros -->
+                <form class="filter-form" id="filterForm">
+                    <div class="filter-group">
+                        <h3 class="filter-group__title">Tipo de cerveza</h3>
+                        
+                        <!-- Checkbox: Rubia -->
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="1" class="filter-option__input">
+                            <span class="filter-option__label">Rubia</span>
+                        </label>
+
+                        <!-- Checkbox: Morena -->
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="2" class="filter-option__input">
+                            <span class="filter-option__label">Morena</span>
+                        </label>
+
+                        <!-- Checkbox: Roja -->
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="3" class="filter-option__input">
+                            <span class="filter-option__label">Roja</span>
+                        </label>
+                    </div>
+                </form>
+
+                <!-- Footer del modal con botones de acción -->
+                <div class="modal__footer">
+                    <button class="button button--secondary" id="clearFilters" disabled>
+                        Limpiar
+                    </button>
+                    <button class="button button--primary" id="applyFilters">
+                        Aplicar filtros
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PLANTILLA DE HANDLEBARS: Tarjeta de producto -->
+    <script id="product-template" type="text/x-handlebars-template">
+        {{#each products}}
+        <article class="product-card">
+            <!-- Imagen del producto -->
+            <div class="product-card__image-container">
+                <img src="img/{{image}}" alt="{{name}}" class="product-card__image">
+            </div>
+            
+            <!-- Información del producto -->
+            <div class="product-card__content">
+                <h3 class="product-card__title">{{name}}</h3>
+                <p class="product-card__description">{{description}}</p>
+                
+                <!-- Detalles en línea -->
+                <div class="product-card__details">
+                    <span class="product-card__alcohol">{{alcohol}}</span>
+                    <span class="product-card__price">{{price}}</span>
+                </div>
+            </div>
+        </article>
+        {{/each}}
+    </script>
+
+    <!-- LIBRERÍAS EXTERNAS -->
+    <!-- Handlebars: Para renderizar plantillas dinámicas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    
+    <!-- SCRIPTS PROPIOS -->
+    <!-- Clase Filter: Lógica de filtrado -->
+    <script src="js/Filter.js"></script>
+    <!-- Main: Inicialización de la aplicación -->
+    <script src="js/main.js"></script>
+</body>
+</html>
