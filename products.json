@@ -1,74 +1,74 @@
 [
   {
     "id": 1,
-    "name": "Golden Ale",
+    "name": "Mahou Cinco Estrellas",
     "category": 1,
-    "image": "camba.png",
-    "price": "4.50€",
-    "alcohol": "5.2%",
-    "description": "Cerveza rubia suave con notas cítricas"
+    "image": "mahou-5-estrellas.webp",
+    "price": "3.00€",
+    "alcohol": "5.5%",
+    "description": "Cerveza rubia lager equilibrada, con amargor moderado y carácter maltoso"
   },
   {
     "id": 2,
-    "name": "Amber Lager",
-    "category": 2,
-    "image": "amber-lager.jpg",
-    "price": "4.80€",
+    "name": "Estrella Galicia Especial",
+    "category": 1,
+    "image": "estrella-galicia.webp",
+    "price": "3.20€",
     "alcohol": "5.5%",
-    "description": "Cerveza morena con cuerpo medio"
+    "description": "Cerveza rubia tipo lager con aroma a malta y lúpulo bien integrado"
   },
   {
     "id": 3,
-    "name": "Red IPA",
-    "category": 3,
-    "image": "red-ipa.jpg",
-    "price": "5.20€",
-    "alcohol": "6.5%",
-    "description": "Cerveza roja intensa con amargor pronunciado"
+    "name": "La Virgen Rubia",
+    "category": 1,
+    "image": "la-virgen-rubia.webp",
+    "price": "4.00€",
+    "alcohol": "5.4%",
+    "description": "Cerveza rubia artesanal madrileña, fresca, con ligero amargor y final seco"
   },
   {
     "id": 4,
-    "name": "Pale Ale",
-    "category": 1,
-    "image": "pale-ale.jpg",
-    "price": "4.70€",
-    "alcohol": "5.8%",
-    "description": "Cerveza rubia con toques florales"
+    "name": "Alhambra Reserva 1925",
+    "category": 2,
+    "image": "alhambra-1925.webp",
+    "price": "3.80€",
+    "alcohol": "6.4%",
+    "description": "Cerveza tostada intensa, con notas a caramelo y final prolongado"
   },
   {
     "id": 5,
-    "name": "Brown Porter",
+    "name": "Ambar Especial",
     "category": 2,
-    "image": "brown-porter.jpg",
-    "price": "5.00€",
-    "alcohol": "6.0%",
-    "description": "Cerveza morena con notas a café"
+    "image": "ambar-especial.webp",
+    "price": "3.30€",
+    "alcohol": "5.2%",
+    "description": "Cerveza tostada suave, con buen equilibrio entre malta y amargor"
   },
   {
     "id": 6,
-    "name": "Irish Red",
-    "category": 3,
-    "image": "irish-red.jpg",
-    "price": "4.90€",
-    "alcohol": "5.5%",
-    "description": "Cerveza roja equilibrada y maltosa"
+    "name": "1906 Reserva Especial",
+    "category": 2,
+    "image": "1906-reserva.webp",
+    "price": "3.90€",
+    "alcohol": "6.5%",
+    "description": "Cerveza tostada con cuerpo, notas maltosas y carácter tradicional"
   },
   {
     "id": 7,
-    "name": "Pilsner",
-    "category": 1,
-    "image": "pilsner.jpg",
-    "price": "4.30€",
-    "alcohol": "4.8%",
-    "description": "Cerveza rubia ligera y refrescante"
+    "name": "Mahou Maestra Roja",
+    "category": 3,
+    "image": "mahou-roja.webp",
+    "price": "4.20€",
+    "alcohol": "6.1%",
+    "description": "Cerveza roja con predominio de malta tostada y matices dulces"
   },
   {
     "id": 8,
-    "name": "Stout",
-    "category": 2,
-    "image": "stout.jpg",
-    "price": "5.50€",
-    "alcohol": "7.0%",
-    "description": "Cerveza morena cremosa e intensa"
+    "name": "Alhambra Roja",
+    "category": 3,
+    "image": "alhambra-roja.webp",
+    "price": "4.50€",
+    "alcohol": "7.2%",
+    "description": "Cerveza roja intensa, especiada y con alto contenido alcohólico"
   }
 ]

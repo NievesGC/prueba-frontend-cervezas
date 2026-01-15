@@ -83,8 +83,8 @@ function initApp() {
   // 1. Cargar los productos
   loadProducts();
   
-  // 2. Inicializar el sistema de filtros (lo haremos después)
-  // productFilter = new ProductFilter();
+  // 2. Inicializar el sistema de filtros
+  productFilter = new ProductFilter();
   
   console.log('✅ Aplicación inicializada');
 }

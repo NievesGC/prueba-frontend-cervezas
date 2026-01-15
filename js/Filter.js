@@ -28,7 +28,7 @@ class ProductFilter {
     this.initEvents();
     
     // Cargar filtros guardados (si existen)
-    this.loadFiltersFromStorage();
+    //this.loadFiltersFromStorage();
     
     console.log('✅ Sistema de filtros inicializado');
   }
@@ -158,8 +158,8 @@ class ProductFilter {
     // Renderizar productos filtrados
     renderProducts(filteredProducts);
     
-    // Guardar filtros en localStorage (bonus)
-    this.saveFiltersToStorage();
+    // Guardar filtros en localStorage
+    //this.saveFiltersToStorage();
     
     console.log(`✅ Filtros aplicados. Productos mostrados: ${filteredProducts.length}`);
   }
@@ -195,7 +195,7 @@ class ProductFilter {
   // ============================================
   // MÉTODO BONUS: Guardar filtros en localStorage
   // ============================================
-  saveFiltersToStorage() {
+  /* saveFiltersToStorage() {
     try {
       // Convertir array a JSON y guardarlo
       localStorage.setItem('selectedFilters', JSON.stringify(this.selectedFilters));
@@ -203,12 +203,12 @@ class ProductFilter {
     } catch (error) {
       console.error('❌ Error al guardar filtros:', error);
     }
-  }
+  } */
   
   // ============================================
   // MÉTODO BONUS: Cargar filtros desde localStorage
   // ============================================
-  loadFiltersFromStorage() {
+  /* loadFiltersFromStorage() {
     try {
       // Obtener filtros guardados
       const savedFilters = localStorage.getItem('selectedFilters');
@@ -245,17 +245,17 @@ class ProductFilter {
     } catch (error) {
       console.error('❌ Error al cargar filtros:', error);
     }
-  }
+  } */
   
   // ============================================
   // MÉTODO BONUS: Limpiar localStorage
   // ============================================
-  clearFiltersFromStorage() {
+  /* clearFiltersFromStorage() {
     try {
       localStorage.removeItem('selectedFilters');
       console.log('🗑️ Filtros eliminados de localStorage');
     } catch (error) {
       console.error('❌ Error al limpiar filtros:', error);
     }
-  }
+  } */
 }
