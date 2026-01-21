@@ -4,7 +4,9 @@
   "description": "Prueba técnica frontend - Sistema de filtros de productos",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch scss:css --style compressed"
+    "sass": "sass --watch scss:css --style compressed",
+    "build:icons": "node js/create-sprite.js",
+    "dev": "live-server"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,9 @@
   "homepage": "https://github.com/NievesGC/prueba-frontend-cervezas#readme",
   "devDependencies": {
     "sass": "^1.97.2"
+  },
+  "dependencies": {
+    "glob": "^13.0.0",
+    "svgstore": "^3.0.1"
   }
 }

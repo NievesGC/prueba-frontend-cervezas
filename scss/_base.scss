@@ -9,7 +9,7 @@ body {
   font-size: $font-size-base;
   line-height: 1.6;                    // Altura de línea para mejor legibilidad
   color: $color-text-primary;
-  background-color: $color-background;
+  background: $color-background;
   -webkit-font-smoothing: antialiased; // Mejora el renderizado de fuentes en Mac
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,6 +20,7 @@ body {
   margin: 0 auto;                      // Centrado horizontal
   padding: $spacing-md;                // Espaciado interno
   min-height: 100vh;                   // Altura mínima de toda la ventana
+  
 }
 
 // Títulos generales

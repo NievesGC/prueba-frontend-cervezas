@@ -5,11 +5,11 @@
 
 .header {
   text-align: center;                    // Centrar el contenido
-  padding: $spacing-xl 0;                // Espaciado arriba y abajo
+  padding: $spacing-sm 0;                // Espaciado arriba y abajo
   margin-bottom: $spacing-lg;            // Separación del contenido siguiente
-  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%); // Degradado
-  color: white;                          // Texto blanco
-  border-radius: $border-radius-lg;      // Bordes redondeados
+  background-color: rgba(255, 255, 255, 0.46); // Degradado
+  color: $color-primary-light;                          // Texto blanco
+  border-radius: $border-radius-full;      // Bordes redondeados
   box-shadow: $shadow-md;                // Sombra suave
 
   // Título principal

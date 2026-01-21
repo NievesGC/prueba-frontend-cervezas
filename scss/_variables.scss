@@ -5,17 +5,17 @@
 
 // --- COLORES ---
 // Colores primarios de la marca
-$color-primary: #f39c12;        // Naranja dorado (color cerveza)
+$color-primary: #6c5126;        // Naranja dorado (color cerveza)
 $color-primary-dark: #d68910;   // Naranja oscuro para hover
-$color-primary-light: #f5b041;  // Naranja claro
+$color-primary-light: #51422a;  // Naranja claro
 
 // Colores de fondo
-$color-background: #f8f9fa;     // Gris muy claro para el fondo
-$color-card-bg: #ffffff;        // Blanco para las tarjetas
+$color-background: linear-gradient(235deg, #828281 20%, #282828 100%);;     // Gris muy claro para el fondo
+$color-card-bg: #ffffffb2;        // Blanco para las tarjetas
 
 // Colores de texto
-$color-text-primary: #2c3e50;   // Gris oscuro para títulos
-$color-text-secondary: #7f8c8d; // Gris medio para descripciones
+$color-text-primary: #00080f;   // Gris oscuro para títulos
+$color-text-secondary: #262929; // Gris medio para descripciones
 $color-text-light: #95a5a6;     // Gris claro para detalles
 
 // Colores de estado
@@ -48,7 +48,7 @@ $spacing-xl: 32px;              // Espaciado extra grande
 $border-radius-sm: 4px;         // Radio pequeño
 $border-radius-md: 8px;         // Radio medio
 $border-radius-lg: 12px;        // Radio grande
-$border-radius-full: 50%;       // Círculo perfecto
+$border-radius-full: 100px;       // Círculo perfecto
 
 // --- SOMBRAS ---
 $shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);           // Sombra suave

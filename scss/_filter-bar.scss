@@ -8,6 +8,9 @@
   justify-content: flex-end;         // Alinea el botón a la derecha
   margin-bottom: $spacing-lg;
   padding: $spacing-md 0;
+  position: sticky;
+  top: 10px;
+  z-index: 1;
 }
 
 // Botón de filtrar
